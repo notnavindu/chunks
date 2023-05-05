@@ -3,6 +3,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import delay from 'delay';
 	import { NEXT_TEXT } from '$lib/constants/001';
+	import Icon from '@iconify/svelte';
 
 	const rows = 5;
 	const cols = 19;
@@ -71,11 +72,14 @@
 	}
 </script>
 
-<Container pageId="001">
+<Container
+	pageId="001"
+	inspirationLink="https://twitter.com/raunofreiberg/status/1648828609996509185"
+>
 	<div class="w-full h-screen flex items-center justify-center p-4">
 		<div
 			class="w-full max-w-fit bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-xl p-5
-            flex flex-col gap-6 overflow-hidden"
+            flex flex-col gap-6 overflow-hidden group cursor-pointer"
 			on:mouseenter={() => (hovering = true)}
 			on:mouseleave={() => (hovering = false)}
 		>
@@ -91,8 +95,18 @@
 				</div>
 			{/each}
 			<div>
-				<div class="text-xl mb-1 opacity-80">SvelteKit</div>
-				<div class="opacity-60 text-sm">Web development, streamlined. <br />Read the docs</div>
+				<div class="text-xl mb-1 opacity-90 font-bold">Next.js 13</div>
+				<div class="flex justify-between w-full items-end">
+					<div class="w-full max-w-[250px] opacity-90">
+						The power of full-stack to the frontend. Read the release notes.
+					</div>
+
+					<div
+						class="bg-white/10 group-hover:bg-white/[0.15] transition-all duration-300 p-2 rounded-full"
+					>
+						<Icon icon="material-symbols:arrow-right-alt" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
