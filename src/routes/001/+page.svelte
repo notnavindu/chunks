@@ -42,7 +42,7 @@
 
 	const showText = async () => {
 		for (let i = 0; i <= NEXT_TEXT.length; i++) {
-			activeBright = [...activeBright, NEXT_TEXT[i]];
+			if (hovering) activeBright = [...activeBright, NEXT_TEXT[i]];
 
 			await delay(15);
 		}
@@ -78,13 +78,13 @@
 >
 	<div class="w-full h-screen flex items-center justify-center p-4">
 		<div
-			class="w-full max-w-fit bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-xl p-5
-            flex flex-col gap-6 overflow-hidden group cursor-pointer"
+			class="w-full max-w-fit bg-gradient-to-br from-zinc-800/75 to-zinc-800/40 border border-zinc-800 rounded-xl p-5
+            flex flex-col gap-3 sm:gap-6 overflow-hidden group cursor-pointer"
 			on:mouseenter={() => (hovering = true)}
 			on:mouseleave={() => (hovering = false)}
 		>
 			{#each { length: rows } as _, rowId}
-				<div class="min-w-full w-fit flex flex-shrink-0 justify-between gap-5">
+				<div class="min-w-full w-fit flex flex-shrink-0 justify-between gap-1 sm:gap-5">
 					{#each { length: cols } as __, colId}
 						<div
 							class="bg-zinc-600 h-[2px] w-[2px] rounded-full transition-all duration-500 transform"
@@ -95,9 +95,9 @@
 				</div>
 			{/each}
 			<div>
-				<div class="text-xl mb-1 opacity-90 font-bold">Next.js 13</div>
+				<div class="text-lg sm:text-xl mb-1 opacity-80 font-bold">Next.js 13</div>
 				<div class="flex justify-between w-full items-end">
-					<div class="w-full max-w-[250px] opacity-90">
+					<div class="w-full max-w-[250px] opacity-80 text-sm sm:text-base">
 						The power of full-stack to the frontend. Read the release notes.
 					</div>
 
