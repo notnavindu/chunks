@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Container from '$components/Container.svelte';
-	import { onDestroy, onMount } from 'svelte';
-	import delay from 'delay';
 	import { NEXT_TEXT } from '$lib/constants/001';
 	import Icon from '@iconify/svelte';
+	import delay from 'delay';
+	import { onDestroy } from 'svelte';
 
 	const rows = 5;
 	const cols = 19;
@@ -74,7 +74,7 @@
 
 <Container
 	pageId="001"
-	inspirationLink="https://twitter.com/raunofreiberg/status/1648828609996509185"
+	inspirations={['https://twitter.com/raunofreiberg/status/1648828609996509185']}
 >
 	<div class="w-full h-screen flex items-center justify-center p-4">
 		<div

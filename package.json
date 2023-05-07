@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/inter": "^4.5.15",
 		"@fontsource/manrope": "^4.5.13",
 		"delay": "^5.0.0"
 	}
