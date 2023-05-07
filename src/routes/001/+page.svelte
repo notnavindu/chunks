@@ -74,7 +74,10 @@
 
 <Container
 	pageId="001"
-	inspirations={['https://twitter.com/raunofreiberg/status/1648828609996509185']}
+	inspirations={[
+		'https://twitter.com/raunofreiberg/status/1648828609996509185',
+		'https://nextjs.org/'
+	]}
 >
 	<div class="w-full h-screen flex items-center justify-center p-4">
 		<div
