@@ -1,4 +1,4 @@
-# web-chunks
+# chunks
 
 UI Experiments. ⭐️ for updates.
 
